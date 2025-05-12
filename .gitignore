@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Arquivos de log
+*.log
+
+# Diretórios de resultados de testes
+allure-results/
+allure-report/
+
+# Relatórios temporários
+report/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configurações de IDE
+.vscode/
+.idea/
+
+# Arquivos de ambiente
+.env
