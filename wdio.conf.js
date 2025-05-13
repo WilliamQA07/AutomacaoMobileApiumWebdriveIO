@@ -4,7 +4,7 @@ exports.config = {
   specs: [
     './PageObjects/**/*.js'
   ],
-  
+
 
   capabilities: [{
     platformName: 'Android',
@@ -13,15 +13,18 @@ exports.config = {
     'appium:automationName': 'UiAutomator2',
     'appium:appPackage': 'com.wilyapp',
     'appium:appActivity': 'com.wilyapp.MainActivity',
-    'appium:noReset': false,  // Isso força o Appium a não reter o estado do aplicativo
+    'appium:noReset': false,  // Isso garante que o Appium não mantenha o estado do app entre os testes
     'appium:fullReset': true, // Isso limpa o cache e dados do aplicativo antes de iniciar
     'appium:autoGrantPermissions': true
   }],
+
 
   hostname: '127.0.0.1',
   port: 4723,
   path: '/wd/hub',
 
-  waitforTimeout: 30000, 
+  waitforTimeout: 30000,  // Aumente o timeout para 30 segundos
+  connectionRetryTimeout: 120000,  // Timeout para tentar a conexão
+  connectionRetryCount: 3,
 }
 
